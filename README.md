@@ -54,6 +54,9 @@ vercel
 
 `main` ブランチにプッシュするたびに自動デプロイされます。
 
+### Web 版について
+- Web では `@react-native-firebase` が使えないため、`hooks/useSurveyForm.web.ts` で Firestore には保存せずフォーム動作のみ行っています。Web で永続化したい場合は Firebase JS SDK の導入を検討してください。
+
 ## Firebase 接続の注意
 このプロジェクトは `@react-native-firebase/app` / `firestore` を使います。
 実機・シミュレータで Firestore 保存を有効にするには、各OSの Firebase 設定ファイル追加が必要です。
