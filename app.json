@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "StorePad App",
+    "slug": "storepad-app",
+    "scheme": "storepad-app",
+    "plugins": [
+      "expo-router"
+    ],
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
