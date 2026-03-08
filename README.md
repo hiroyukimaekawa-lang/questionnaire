@@ -36,6 +36,24 @@ npm run web
 npm run typecheck
 ```
 
+## Vercel へのデプロイ
+
+### 方法1: Vercel CLI でデプロイ
+```bash
+npm install -g vercel@latest
+vercel
+```
+初回はログインやプロジェクト設定の質問に答えます。
+
+### 方法2: GitHub 連携（推奨）
+1. [Vercel](https://vercel.com) にログイン
+2. 「Add New」→「Project」を選択
+3. GitHub リポジトリをインポート
+4. ビルド設定は `vercel.json` により自動検出されます
+5. 「Deploy」をクリック
+
+`main` ブランチにプッシュするたびに自動デプロイされます。
+
 ## Firebase 接続の注意
 このプロジェクトは `@react-native-firebase/app` / `firestore` を使います。
 実機・シミュレータで Firestore 保存を有効にするには、各OSの Firebase 設定ファイル追加が必要です。
