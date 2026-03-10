@@ -25,7 +25,8 @@ export default function ThanksLowScreen() {
     <SafeAreaView className="flex-1 bg-[#f5f5f5]">
       <StatusBar style="dark" backgroundColor="#f5f5f5" />
       <Header />
-      <View className="flex-1 items-center justify-center px-8">
+      <View className="flex-1 items-center justify-center px-6">
+        <View className="w-full max-w-[760px] items-center">
         <Text className="text-center font-noto text-[22px] font-bold text-[#1f1f1f]">
           ご回答いただきありがとうございました
         </Text>
@@ -39,6 +40,7 @@ export default function ThanksLowScreen() {
         <Text className="mt-8 font-noto text-[13px] text-[#8d8d8d]">
           回答完了日時：{submittedAtLabel}
         </Text>
+        </View>
       </View>
     </SafeAreaView>
   );

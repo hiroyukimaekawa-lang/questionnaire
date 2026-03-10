@@ -1,4 +1,4 @@
-import { Platform, Pressable, Text, View } from 'react-native';
+import { Platform, Pressable, ScrollView, Text, View } from 'react-native';
 
 type Props = {
   value: number | null;
@@ -10,14 +10,18 @@ const scoreOptions = Array.from({ length: 10 }, (_, idx) => idx + 1);
 export function NPSSelector({ value, onChange }: Props) {
   return (
     <View>
-      <View className="flex-row flex-wrap justify-between gap-y-2">
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ paddingHorizontal: 2 }}
+      >
         {scoreOptions.map((score) => {
           const selected = value === score;
           return (
             <Pressable
               key={score}
               onPress={() => onChange(score)}
-              className={`h-10 w-10 items-center justify-center rounded-full border ${
+              className={`mr-2 h-10 w-10 items-center justify-center rounded-full border ${
                 selected
                   ? 'border-[#4a7a95] bg-[#4a7a95]'
                   : 'border-[#b0c4d0] bg-white'
@@ -45,7 +49,7 @@ export function NPSSelector({ value, onChange }: Props) {
             </Pressable>
           );
         })}
-      </View>
+      </ScrollView>
 
       <View className="mt-3 flex-row items-center justify-between">
         <Text className="font-noto text-xs text-[#6b6b6b]">満足していない</Text>

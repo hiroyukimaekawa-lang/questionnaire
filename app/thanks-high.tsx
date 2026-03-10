@@ -27,7 +27,8 @@ export default function ThanksHighScreen() {
     <SafeAreaView className="flex-1 bg-[#f5f5f5]">
       <StatusBar style="dark" backgroundColor="#f5f5f5" />
       <Header />
-      <View className="flex-1 items-center justify-center px-8">
+      <View className="flex-1 items-center justify-center px-6">
+        <View className="w-full max-w-[760px] items-center">
         <Text className="text-center font-noto text-[22px] font-bold text-[#1f1f1f]">
           ご回答いただきありがとうございました
         </Text>
@@ -43,7 +44,7 @@ export default function ThanksHighScreen() {
         </Text>
 
         <Pressable
-          className="mt-8 w-[80%] rounded-full bg-[#FF6B1A] px-5 py-4"
+          className="mt-8 w-full max-w-[420px] rounded-full bg-[#FF6B1A] px-5 py-4"
           onPress={() => Linking.openURL(CONFIG.googleReviewUrl)}
         >
           <Text className="text-center font-noto text-base font-bold text-white">
@@ -56,6 +57,7 @@ export default function ThanksHighScreen() {
             食べログで応援する ›
           </Text>
         </Pressable>
+        </View>
       </View>
     </SafeAreaView>
   );

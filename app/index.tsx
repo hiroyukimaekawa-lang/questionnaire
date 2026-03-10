@@ -42,16 +42,21 @@ export default function SurveyScreen() {
     <SafeAreaView className="flex-1 bg-white">
       <StatusBar style="dark" backgroundColor="#ffffff" />
       <Header />
-      <ScrollView className="flex-1 bg-[#f5f5f5]" contentContainerStyle={{ paddingBottom: 40 }}>
-        <HeroBanner />
+      <ScrollView
+        className="flex-1 bg-[#f5f5f5]"
+        contentContainerStyle={{ paddingBottom: 40, alignItems: 'center' }}
+      >
+        <View className="w-full max-w-[760px]">
+          <HeroBanner />
+        </View>
 
-        <View className="px-5 pt-5">
-          <View className="mb-5 self-end rounded-md border border-[#d9d9d9] bg-white px-2">
+        <View className="w-full max-w-[760px] px-5 pt-5">
+          <View className="mb-5 w-full max-w-[220px] self-end rounded-md border border-[#d9d9d9] bg-white px-2">
             <Text className="pt-2 font-noto text-xs text-[#8a8a8a]">Language</Text>
             <Picker
               selectedValue={form.language}
               onValueChange={(value) => setLanguage(String(value))}
-              style={{ width: 170, marginTop: -6 }}
+              style={{ width: '100%', marginTop: -6 }}
             >
               {CONFIG.languages.map((language) => (
                 <Picker.Item key={language} label={language} value={language} />
