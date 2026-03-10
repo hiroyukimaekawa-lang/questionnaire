@@ -68,7 +68,7 @@ export default function SurveyScreen() {
 
           <View className="mb-7 gap-2">
             <Text className="font-noto text-[15px] text-[#2b2b2b]">
-              DMM店をご利用いただき誠にありがとうございます✨
+              Crestixをご利用いただき誠にありがとうございます✨
             </Text>
             <Text className="font-noto text-[15px] text-[#2b2b2b]">
               サービス向上のために、アンケートにご協力お願い致します

@@ -1,5 +1,5 @@
 export const CONFIG = {
-  storeName: 'DMM飲食店',
+  storeName: 'Crestix',
   googleReviewUrl:
     'https://search.google.com/local/writereview?placeid=YOUR_PLACE_ID',
   tabelogUrl: 'https://tabelog.com/YOUR_SHOP_URL/',
