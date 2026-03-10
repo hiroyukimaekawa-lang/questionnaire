@@ -51,17 +51,19 @@ export default function SurveyScreen() {
         </View>
 
         <View className="w-full max-w-[760px] px-5 pt-5">
-          <View className="mb-5 w-full max-w-[220px] self-end rounded-md border border-[#d9d9d9] bg-white px-2">
-            <Text className="pt-2 font-noto text-xs text-[#8a8a8a]">Language</Text>
-            <Picker
-              selectedValue={form.language}
-              onValueChange={(value) => setLanguage(String(value))}
-              style={{ width: '100%', marginTop: -6 }}
-            >
-              {CONFIG.languages.map((language) => (
-                <Picker.Item key={language} label={language} value={language} />
-              ))}
-            </Picker>
+          <View className="mb-8 flex-row items-center justify-center self-center w-full">
+            <Text className="mr-8 font-noto text-[15px] text-[#2b2b2b]">Language</Text>
+            <View className="w-[200px] justify-center rounded-md border border-[#d9d9d9] bg-white h-11">
+              <Picker
+                selectedValue={form.language}
+                onValueChange={(value) => setLanguage(String(value))}
+                style={{ width: '100%' }}
+              >
+                {CONFIG.languages.map((language) => (
+                  <Picker.Item key={language} label={language} value={language} />
+                ))}
+              </Picker>
+            </View>
           </View>
 
           <View className="mb-7 gap-2">
