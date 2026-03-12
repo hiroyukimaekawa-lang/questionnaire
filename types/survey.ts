@@ -6,12 +6,14 @@ export interface SurveyAnswer {
   language: string;
   submittedAt: FirebaseFirestoreTypes.Timestamp;
   isHighScore: boolean;
+  staffName: string | null;
 }
 
 export interface SurveyFormState {
   score: number | null;
   purpose: string | null;
   language: string;
+  staffName: string | null;
 }
 
 export interface SurveyFormErrors {

@@ -1,5 +1,5 @@
 import { Picker } from '@react-native-picker/picker';
-import { router } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { Alert, SafeAreaView, ScrollView, Text, View } from 'react-native';
 
@@ -21,8 +21,9 @@ function RequiredTitle({ title }: { title: string }) {
 }
 
 export default function SurveyScreen() {
+  const { staff } = useLocalSearchParams<{ staff: string }>();
   const { form, errors, submitting, setScore, setPurpose, setLanguage, submit } =
-    useSurveyForm();
+    useSurveyForm(staff);
 
   const onSubmit = async () => {
     const result = await submit();

@@ -8,10 +8,14 @@ const INITIAL_STATE: SurveyFormState = {
   score: null,
   purpose: null,
   language: CONFIG.languages[0],
+  staffName: null,
 };
 
-export function useSurveyForm() {
-  const [form, setForm] = useState<SurveyFormState>(INITIAL_STATE);
+export function useSurveyForm(initialStaff?: string) {
+  const [form, setForm] = useState<SurveyFormState>({
+    ...INITIAL_STATE,
+    staffName: initialStaff || null,
+  });
   const [errors, setErrors] = useState<SurveyFormErrors>({});
   const [submitting, setSubmitting] = useState(false);
 
@@ -63,6 +67,7 @@ export function useSurveyForm() {
         language: form.language,
         submittedAt: firestore.Timestamp.now(),
         isHighScore: form.score >= CONFIG.highScoreThreshold,
+        staffName: form.staffName,
       };
 
       await firestore().collection('surveys').add(payload);
