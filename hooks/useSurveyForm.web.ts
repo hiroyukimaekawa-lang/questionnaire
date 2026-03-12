@@ -62,7 +62,8 @@ export function useSurveyForm(initialStaff?: string) {
       if (GAS_WEBAPP_URL) {
         fetch(GAS_WEBAPP_URL, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain' },
           body: JSON.stringify({
             score: form.score,
             purpose: form.purpose,
