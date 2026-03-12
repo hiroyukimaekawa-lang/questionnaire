@@ -3,7 +3,7 @@ import { useMemo, useState } from 'react';
 import { CONFIG } from '@/constants/config';
 import type { SurveyFormErrors, SurveyFormState } from '@/types/survey';
 
-const GAS_WEBAPP_URL = 'https://script.google.com/a/macros/crestix-inc.com/s/AKfycbxLFXYSiYX19Xn7PS8RZ72AcRXgxackIhS2HzOlvploIvg1eMPZtD2xQxoVtyMfPBEh/exec';
+const GAS_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbxcMrPHYbY6i3a3rryWyZM80Yhi8ZY_s45FbZN6fUxr8_nhZKdi2j4wEmVKND2sfSpv/exec';
 
 const INITIAL_STATE: SurveyFormState = {
   score: null,
